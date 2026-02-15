@@ -36,7 +36,7 @@ app.post('/webhook', async (req, res) => {
 
       try {
         // Consultar a Gemini IA
-        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
         const result = await model.generateContent(text);
         const responseText = result.response.text();
 
